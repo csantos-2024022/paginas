@@ -1,0 +1,139 @@
+:root {
+    --madrid-blue: #1a2a6c;
+    --madrid-gold: #c5a059;
+    --paper-white: #ffffff;
+    --line-blue: #e1eaf3;
+}
+
+body {
+    background-color: #d2b48c; /* Color mesa */
+    background-image: url('https://www.transparenttextures.com/patterns/dark-wood.png');
+    margin: 0;
+    padding: 20px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.notebook-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.paper {
+    background-color: var(--paper-white);
+    width: 100%;
+    max-width: 900px;
+    min-height: 1100px;
+    position: relative;
+    padding: 60px 50px 60px 80px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    /* Líneas de cuaderno */
+    background-image: linear-gradient(var(--line-blue) 1px, transparent 1px);
+    background-size: 100% 30px;
+}
+
+.red-margin {
+    position: absolute;
+    left: 65px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #ff8a8a;
+}
+
+.marker-title {
+    font-family: 'Permanent Marker', cursive;
+    color: var(--madrid-blue);
+    font-size: 2.5rem;
+    transform: rotate(-1deg);
+    margin-bottom: 40px;
+}
+
+.main-logo {
+    width: 80px;
+    float: right;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2));
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+h2 {
+    color: var(--madrid-gold);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--madrid-gold);
+}
+
+p {
+    line-height: 30px; /* Crucial para alinear con las rayas */
+    font-size: 1.2rem;
+    color: #222;
+}
+
+/* Efecto de foto pegada */
+.photo-clip {
+    background: white;
+    padding: 10px 10px 30px 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transform: rotate(3deg);
+    border: 1px solid #ddd;
+}
+
+.photo-clip img {
+    width: 100%;
+    height: auto;
+    filter: sepia(0.2);
+}
+
+.caption {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Post-it amarillo */
+.post-it {
+    background: #ffffa5;
+    padding: 20px;
+    transform: rotate(-2deg);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.post-it h3 {
+    margin-top: 0;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.2rem;
+}
+
+.notebook-footer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.btn-back {
+    background: var(--madrid-blue);
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background: var(--madrid-gold);
+}
