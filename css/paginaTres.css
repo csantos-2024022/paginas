@@ -1,0 +1,106 @@
+:root {
+    --kinal-dark: #0f1c30;
+    --kinal-orange: #f39c12;
+    --kinal-white: #ffffff;
+    --text-gray: #d1d5db;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f7f6;
+}
+
+/* --- NAVBAR --- */
+.kinal-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: var(--kinal-white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo { width: 150px; }
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { text-decoration: none; color: var(--kinal-dark); font-weight: bold; }
+
+/* --- HERO --- */
+.hero {
+    height: 80vh;
+    background: url('../img/hero-kinal.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(15, 28, 48, 0.7); /* Azul Kinal con transparencia */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-content { color: white; max-width: 600px; }
+.hero-content h1 { font-size: 4rem; margin: 10px 0; font-weight: 900; }
+.hero-content span { color: var(--kinal-orange); }
+
+.btn-primary {
+    background: var(--kinal-orange);
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* --- BLOG CARDS --- */
+.blog-section { padding: 80px 10%; background: var(--kinal-dark); color: white; }
+.section-title { text-align: center; margin-bottom: 50px; font-size: 2rem; }
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.blog-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.blog-card:hover { transform: translateY(-10px); background: rgba(255,255,255,0.1); }
+.card-img { height: 200px; background-size: cover; background-position: center; }
+.card-info { padding: 25px; }
+
+/* --- EXPLICACIÓN --- */
+.redesign-explain { padding: 60px 10%; }
+.explain-box {
+    background: white;
+    padding: 40px;
+    border-left: 10px solid var(--kinal-orange);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* --- FOOTER --- */
+.kinal-footer {
+    background: #0a121f;
+    color: var(--text-gray);
+    padding: 60px 10% 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.footer-logo { width: 120px; margin: 0 auto; }
+.copyright { text-align: center; font-size: 0.8rem; border-top: 1px solid #222; padding-top: 20px; }
