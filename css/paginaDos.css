@@ -29,8 +29,11 @@ body {
     box-shadow:
         0 20px 40px rgba(0,0,0,0.35),
         inset 0 0 0 1px rgba(0,0,0,0.05);
-    background-image: linear-gradient(#e6eef6 1px, transparent 1px);
-    background-size: 100% 32px;
+        background-image: 
+        linear-gradient(#e6eef6 1px, transparent 1px), 
+        url('https://www.transparenttextures.com/patterns/natural-paper.png');
+    
+    background-size: 100% 32px, auto; 
     transform-style: preserve-3d;
 }
 
@@ -168,4 +171,47 @@ p {
 @keyframes fadeDown {
     from { transform: translateY(-30px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
+}
+
+
+/* Efecto de Marcatextos Real */
+.highlight {
+    background: rgba(187, 247, 208, 0.3); /* Verde muy suave */
+    position: relative;
+    border-left: none; /* Quitamos el borde aburrido */
+}
+
+.highlight::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 8px; height: 100%;
+    background: #2ecc71;
+    border-radius: 4px;
+}
+
+/* Sticker de "Importante" o "Meta" */
+.sticker {
+    position: absolute;
+    right: -20px;
+    top: 150px;
+    background: #ff7675;
+    color: white;
+    padding: 10px 20px;
+    transform: rotate(15deg);
+    font-family: 'Permanent Marker', cursive;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+/* Animación de pulso para el corazón/medicina */
+.pulse {
+    display: inline-block;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }
