@@ -2,75 +2,245 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>Fundación Kinal | Rediseño</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rediseño Fundación Kinal</title>
+
     <link rel="stylesheet" href="../css/paginaTres.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="kinal-nav">
-        <img src="../img/descarga.png" alt="Logo Kinal" class="nav-logo">
-        <ul class="nav-links">
-            <li><a href="#">Apóyanos</a></li>
-            <li><a href="#">Educación</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="index.html" class="btn-home">Inicio</a></li>
-        </ul>
-    </nav>
+<!-- ================= NAVBAR ================= -->
+<nav class="kinal-nav">
+    <div class="nav-left">
+        <img src="../img/descarga2.png" alt="Fundación Kinal" class="nav-logo">
+    </div>
 
-    <header class="hero">
-        <div class="hero-overlay">
-            <div class="hero-content">
-                <span class="badge">ESTUDIA CON NOSOTROS</span>
-                <h1>SOMOS <span>SUPERACIÓN</span></h1>
-                <p>Formamos técnicos profesionales con valores para el éxito de Guatemala.</p>
-                <div class="hero-btns">
-                    <a href="#" class="btn-primary">Admisiones 2026</a>
-                    <a href="#" class="btn-secondary">Nuestros Cursos</a>
-                </div>
-            </div>
+    <ul class="nav-links">
+        <li><a href="#">APÓYANOS</a></li>
+        <li><a href="#">QUIÉNES SOMOS</a></li>
+        <li><a href="#">EDUCACIÓN</a></li>
+        <li><a href="#">ANTIGUOS ALUMNOS</a></li>
+        <li><a href="#">BOLSA DE EMPLEOS</a></li>
+        <li><a href="#">BLOG</a></li>
+    </ul>
+
+    <div class="nav-right">
+        <span class="lang">ES</span>
+    </div>
+</nav>
+
+
+<!-- ================= Imagenes cambiadas ================= -->
+
+        <section class="hero">
+        <div class="flash"></div>
+
+        <div class="slides">
+            <img src="../img/imagen1.webp" class="slide active">
+            <img src="../img/img1.avif" class="slide">
+            <img src="../img/img2.avif" class="slide">
+            <img src="../img/img3.avif" class="slide">
         </div>
-    </header>
 
-    <section class="blog-section">
-        <h2 class="section-title">NUESTRO BLOG</h2>
-        <div class="blog-grid">
-            <article class="blog-card">
-                <div class="card-img" style="background-image: url('../img/kinal1.jpg');"></div>
-                <div class="card-info">
-                    <h3>Patronato KINAL</h3>
-                    <p>Mensaje semanal 49 | 2025</p>
-                    <a href="#">Leer más →</a>
-                </div>
-            </article>
-            <article class="blog-card">
-                <div class="card-img" style="background-image: url('../img/kinal2.jpg');"></div>
-                <div class="card-info">
-                    <h3>Actualidad Técnica</h3>
-                    <p>Mensaje semanal 48 | 2025</p>
-                    <a href="#">Leer más →</a>
-                </div>
-            </article>
+        <div class="hero-text">
+            <img src="../img/descarga2.png" alt="Kinal" class="hero-logo">
+
+            <h1>SOMOS SUPERACIÓN</h1>
+            <p id="heroSubtitle">Para jóvenes</p>
         </div>
-    </section>
+        </section>
 
+        <script>
+            const slides = document.querySelectorAll('.slide');
+            const subtitle = document.getElementById('heroSubtitle');
+            const flash = document.querySelector('.flash');
 
-    <footer class="kinal-footer">
-        <div class="footer-grid">
-            <div class="contact">
-                <h4>CONTÁCTANOS</h4>
-                <p>infocet@kinal.org.gt</p>
-                <p>2216-0090</p>
-            </div>
-            <img src="../img/escudo-kinal.png" alt="Logo Kinal White" class="footer-logo">
-            <div class="location">
-                <h4>UBICACIÓN</h4>
-                <p>6 avenida 13-54 zona 7, Colonia Landívar</p>
-            </div>
+            const texts = [
+                "Para todos",
+                "Para jóvenes",
+                "Para adultos",
+                "Siempre creciendo"
+            ];
+
+            let index = 0;
+
+            setInterval(() => {
+                slides[index].classList.remove('active');
+
+                index = (index + 1) % slides.length;
+
+                slides[index].classList.add('active');
+                subtitle.textContent = texts[index];
+
+                flash.classList.add('active');
+                setTimeout(() => flash.classList.remove('active'), 600);
+            }, 4000);
+            </script>
+
+        <!-- Seccion de galery-->
+        <section class="gallery-collage">
+
+        <!-- IMÁGENES -->
+        <div class="collage">
+            <img src="../img/g1.webp" class="img img1">
+            <img src="../img/g2.webp" class="img img2">
+            <img src="../img/g3.webp" class="img img3">
+            <img src="../img/g4.webp" class="img img4">
+            <img src="../img/g5.webp" class="img img5">
+            <img src="../img/g6.webp" class="img img6">
+            <img src="../img/g7.webp" class="img img7">
+            <img src="../img/g8.webp" class="img img8">
+            <img src="../img/g9.webp" class="img img9">
+            <img src="../img/g10.webp" class="img img10">
+            <img src="../img/g11.webp" class="img img11">
+            <img src="../img/g12.webp" class="img img12">
         </div>
-        <p class="copyright">FUNDACIÓN KINAL | 2024 TODOS LOS DERECHOS RESERVADOS</p>
-    </footer>
+
+        <!-- TEXTO -->
+        <div class="gallery-title">
+            <span class="blue">GALERÍA</span>
+            <span class="orange">DE FOTOS</span>
+        </div>
+
+        </section>
+
+
+            <script>
+            const title = document.querySelector('.gallery-title');
+
+            window.addEventListener('scroll', () => {
+                const position = title.getBoundingClientRect().top;
+                const screenHeight = window.innerHeight;
+
+                if (position < screenHeight - 150) {
+                title.classList.add('show');
+                }
+            });
+            </script>
+
+
+
+<section class="info-section">
+    <div class="info-text">
+        <h2>¿Quiénes Somos?</h2>
+        <p>
+            Fundación Kinal es una institución educativa que forma jóvenes y adultos en áreas técnicas,
+            tecnológicas y humanas, promoviendo valores, disciplina y excelencia académica.
+        </p>
+        <p>
+            Nuestro objetivo es brindar oportunidades reales de crecimiento personal y profesional,
+            impactando positivamente en la sociedad guatemalteca.
+        </p>
+    </div>
+
+    <div class="info-image">
+        <img src="../img/imagen2.avif" alt="Kinal">
+    </div>
+</section>
+
+<!-- ================= ESTADÍSTICAS ================= -->
+<section class="stats-section">
+    <div class="stat">
+        <h3>60+</h3>
+        <p>Años de experiencia</p>
+    </div>
+    <div class="stat">
+        <h3>12,000+</h3>
+        <p>Estudiantes formados</p>
+    </div>
+    <div class="stat">
+        <h3>90%</h3>
+        <p>Inserción laboral</p>
+    </div>
+    <div class="stat">
+        <h3>40+</h3>
+        <p>Empresas aliadas</p>
+    </div>
+</section>
+
+<section class="education-section">
+    <h2 class="section-title">Nuestra Oferta Educativa</h2>
+
+    <div class="education-grid">
+        <article class="education-card">
+            <h3>Carreras Técnicas</h3>
+            <p>Formación práctica y especializada para el mundo laboral.</p>
+        </article>
+
+        <article class="education-card">
+            <h3>Educación Básica</h3>
+            <p>Base académica sólida con enfoque en valores.</p>
+        </article>
+
+        <article class="education-card">
+            <h3>Diversificado</h3>
+            <p>Preparación integral para estudios superiores.</p>
+        </article>
+
+        <article class="education-card">
+            <h3>Capacitación</h3>
+            <p>Cursos técnicos para jóvenes y adultos.</p>
+        </article>
+    </div>
+</section>
+
+<section class="blog-section">
+    <h2 class="section-title">Nuestro Blog</h2>
+
+    <div class="blog-grid">
+        <article class="blog-card">
+            <div class="card-img"></div>
+            <div class="card-info">
+                <h3>Patronato KINAL</h3>
+                <p>Mensaje semanal</p>
+                <a href="#">Leer más →</a>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <div class="card-img"></div>
+            <div class="card-info">
+                <h3>Actualidad Técnica</h3>
+                <p>Noticias y eventos</p>
+                <a href="#">Leer más →</a>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="cta-section">
+    <h2>Forma parte de Kinal</h2>
+    <p>Construye tu futuro con una educación técnica de calidad.</p>
+    <a href="#" class="btn-primary">Inscríbete Ahora</a>
+</section>
+
+<footer class="kinal-footer">
+    <div class="footer-grid">
+
+        <div>
+            <h4>Contáctanos</h4>
+            <p>kinal@kinal.org.gt</p>
+            <p>2216-00000</p>
+        </div>
+
+        <img src="../img/descarga2.png" class="footer-logo" alt="Kinal">
+
+        <div>
+            <h4>Ubicación</h4>
+            <p>6 avenida 13-54 zona 7, Colonia Landívar</p>
+        </div>
+
+    </div>
+
+    <p class="copyright">
+        FUNDACIÓN KINAL © 2026 - TODOS LOS DERECHOS RESERVADOS
+    </p>
+                <footer class="notebook-footer">
+                <span class="page-num">Página 3</span>
+                <a href="../index.html" class="btn-back">← Volver a Portada</a>
+            </footer>
+</footer>
 
 </body>
 </html>
